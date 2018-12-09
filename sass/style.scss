@@ -1,4 +1,4 @@
-$font-main: 'Pacifico', cursive;
+$font-main: 'Lobster', cursive;
 
 body {
     font-family: $font-main;
@@ -21,8 +21,14 @@ body {
     }
 
     &__content {
-
+        font-size: 2.5em;
     }
+}
+
+.carousel-progress-bar {
+    height: 1vh;
+    width: 0;
+    background: #857777;
 }
 
 .carousel-restart {
@@ -33,8 +39,8 @@ body {
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    background-color: #8688f3;
-    border: none;
+    background-color: rgba(134, 136, 243, .4);
+    border: 1px dotted #fff;
     border-radius: 4px;
 }
 
