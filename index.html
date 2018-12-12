@@ -4,30 +4,56 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cities I would like to visit</title>
-        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Lobster" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendor/flickity.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <div class="main-carousel">
-            <div class="carousel-cell" id="carousel-cell1" style="background-image: url('https://images.pexels.com/photos/8939/iceland-holiday-night-clouds.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
-                <div class="container carousel-cell__content">Reykjavik</div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell2" style="background-image: url('https://images.pexels.com/photos/417377/pexels-photo-417377.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
-                <div class="container carousel-cell__content">Singapore</div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell3" style="background-image: url('https://images.pexels.com/photos/1115878/pexels-photo-1115878.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
-                <div class="container carousel-cell__content">Los Angeles</div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell4" style="background-image: url('https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')">
-                <div class="container carousel-cell__content">Tokyo</div>
-            </div>
+        <div id="main-carousel" class="main-carousel">
         </div>
         <div class="carousel-progress-bar"></div>
         <button type="button" class="carousel-restart">Restart</button>
+        <script id= "cities-list" type="x-tmpl-mustache">
+            <div class="carousel-cell" id="carousel-cell{{number}}" style="background-image: url('{{image}}')">
+                <h2 class="carousel-cell__header">{{title}}</h2>
+                <div class="carousel-cell__content">
+                    <div class="container carousel-cell__paragraph">
+                        {{{description}}}
+                    </div>
+                </div>
+            </div>
+        </script>
+        <script>
+            var citiesData = [
+                {
+                    title: 'Reykjavik',
+                    description: "<p>Reykjavik is  diverse, cosmopolitan and captivating - a city with its own inimitable character, one easy to fall in love with.</p>",
+                    image: 'https://images.pexels.com/photos/8939/iceland-holiday-night-clouds.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                },
+
+                {
+                    title: 'Singapore',
+                    description: "<p>Quickly becoming Asia's hit-list travel destination, combining great food, exciting nightlife and a diverse architecture, this Lion City is a great stopover. </p>",
+                    image: 'https://images.pexels.com/photos/417377/pexels-photo-417377.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                },
+
+                {
+                    title: 'Los Angeles',
+                    description: "<p>Ruggedly good looking, deeply creative, with a sunny disposition to boot, LA is definitely a place to see.</p>",
+                    image: 'https://images.pexels.com/photos/1115878/pexels-photo-1115878.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                },
+
+                {
+                    title: 'Tokyo',
+                    description: "<p>The city that never sleeps, connecting the past with the future, Tokyo is a mixture of its traditional culture and a passion for everything new. </p>",
+                    image: 'https://images.unsplash.com/photo-1484995978482-cf913162930c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1980&q=80',
+                }
+            ]
+        </script>
         <script type="text/javascript" src="vendor/flickity.pkgd.min.js"></script>
         <script type="text/javascript" src="vendor/hash.js"></script>
+        <script type="text/javascript" src="vendor/mustache.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>

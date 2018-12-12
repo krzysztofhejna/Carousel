@@ -11,8 +11,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   display: -webkit-flex;
-  -ms-flex-align: center;
-      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .carousel-cell .container {
@@ -22,7 +24,29 @@ body {
 }
 
 .carousel-cell__content {
-  font-size: 2.5em;
+  width: 100vw;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-cell__header {
+  margin: 0 auto 1vh;
+  font-size: 3em;
+  color: white;
+  mix-blend-mode: luminosity;
+  text-shadow: 1px 1px black;
+}
+
+.carousel-cell__paragraph {
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  padding: 1vh 0;
+  font-size: 1.5em;
+}
+
+.carousel-cell__paragraph p {
+  margin: 0;
 }
 
 .carousel-progress-bar {
