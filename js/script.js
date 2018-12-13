@@ -6,13 +6,12 @@
     var progressBar = document.querySelector('.carousel-progress-bar');
 
     var templateCities = document.getElementById('cities-list').innerHTML;
+    var citiesDataLen = citiesData.length;
     var listItems = '';
 
-    for (var i = 0; i < citiesData.length; i++) {
-        console.log (citiesData);
+    for (var i = 0; i < citiesDataLen; i++) {
         citiesData[i].number = i + 1;
         listItems += Mustache.render(templateCities, citiesData[i]);
-        console.log(listItems);
     }
 
     carouselMain.insertAdjacentHTML('beforeend', listItems);
@@ -26,4 +25,14 @@
     restartButton.addEventListener('click', function(event) {
         flkty.select(0, true, false);
     })
+
+    window.initMap = function() {
+        var map = new google.maps.Map(document.getElementById('google-map'), {zoom: 7, center: citiesData[0].coordinates});
+        for (var i = 0; i < citiesDataLen; i++) {
+            var marker = new google.maps.Marker({
+                position: citiesData[i].coordinates,
+                map: map,
+            });
+        }
+    }
 })();
