@@ -13,6 +13,7 @@
         <div id="main-carousel" class="main-carousel">
         </div>
         <div class="carousel-progress-bar"></div>
+        <div class="google-map" id="google-map"></div>
         <button type="button" class="carousel-restart">Restart</button>
         <script id= "cities-list" type="x-tmpl-mustache">
             <div class="carousel-cell" id="carousel-cell{{number}}" style="background-image: url('{{image}}')">
@@ -55,5 +56,6 @@
         <script type="text/javascript" src="vendor/hash.js"></script>
         <script type="text/javascript" src="vendor/mustache.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8sVPjB-nrd32xZbFab88BTH7ztxpN0OA&callback=initMap"></script>
     </body>
 </html>
