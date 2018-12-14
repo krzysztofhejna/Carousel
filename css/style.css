@@ -1,50 +1,21 @@
-body {
-  font-family: "Lobster", cursive;
-}
+body { font-family: "Lobster", cursive; }
 
-.carousel-cell {
-  width: 100%;
-  height: 50vh;
-  min-height: 250px;
-  background-size: cover;
-  background-position: 50% 50%;
-  display: -ms-flexbox;
-  display: flex;
-  display: -webkit-flex;
-  -ms-flex-align: center;
-      align-items: center;
-}
+.carousel-cell { width: 100%; height: 50vh; min-height: 250px; background-size: cover; background-position: 50% 50%; display: -ms-flexbox; display: flex; display: -webkit-flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: center; justify-content: center; }
 
-.carousel-cell .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
+.carousel-cell .container { max-width: 1200px; margin: 0 auto; text-align: center; }
 
-.carousel-cell__content {
-  font-size: 2.5em;
-}
+.carousel-cell__content { width: 100vw; margin: 0 auto; text-align: center; background-color: rgba(0, 0, 0, 0.5); }
 
-.carousel-progress-bar {
-  height: 1vh;
-  width: 0;
-  background: #857777;
-}
+.carousel-cell__header { margin: 0 auto 1vh; font-size: 3em; color: white; mix-blend-mode: luminosity; text-shadow: 1px 1px black; }
 
-.carousel-restart {
-  position: absolute;
-  right: 2vw;
-  top: 2vh;
-  color: #fff;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  background-color: rgba(134, 136, 243, 0.4);
-  border: 1px dotted #fff;
-  border-radius: 4px;
-}
+.carousel-cell__paragraph { font-family: "Josefin Sans", sans-serif; color: #fff; padding: 1vh 0; font-size: 1.5em; }
 
-.flickity-page-dots {
-  display: none;
-}
-/*# sourceMappingURL=style.css.map */
+.carousel-cell__paragraph p { margin: 0; }
+
+.carousel-progress-bar { height: 1vh; width: 0; background: #857777; }
+
+.carousel-restart { position: absolute; right: 2vw; top: 2vh; color: #fff; padding: 10px 20px; text-align: center; text-decoration: none; background-color: rgba(134, 136, 243, 0.4); border: 1px dotted #fff; border-radius: 4px; }
+
+.flickity-page-dots { display: none; }
+
+.google-map { height: 50vh; width: 100%; background-color: grey; }
