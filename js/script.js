@@ -43,8 +43,8 @@
             markerClick(marker, i);
 
             flkty.on('change', function(index){
-                map.panTo(citiesData[index].coordinates);
                 map.setZoom(7);
+                map.panTo(citiesData[index].coordinates);
             });
         }
     }
