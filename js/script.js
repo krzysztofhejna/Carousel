@@ -27,8 +27,12 @@
     })
 
     window.initMap = function() {
-        var reykjavik = {lat: 64.150, lng: -21.964};
-        var map = new google.maps.Map(document.getElementById('google-map'), {zoom: 7, center: reykjavik});
-        var marker = new google.maps.Marker({position: reykjavik, map: map});
-    }   
+        var map = new google.maps.Map(document.getElementById('google-map'), {zoom: 7, center: citiesData[0].coordinates});
+        for (var i = 0; i < citiesDataLen; i++) {
+            var marker = new google.maps.Marker({
+                position: citiesData[i].coordinates,
+                map: map,
+            });
+        }
+    }
 })();
