@@ -22,7 +22,7 @@
         progressBar.style.width = progress * 100 + '%';
     });
 
-    restartButton.addEventListener('click', function(event) {
+    restartButton.addEventListener('click', function() {
         flkty.select(0, true, false);
     })
 
@@ -32,6 +32,19 @@
             var marker = new google.maps.Marker({
                 position: citiesData[i].coordinates,
                 map: map,
+            });
+
+            function markerClick(marker, i) {
+                marker.addListener('click', function(){
+                    flkty.select(i);
+                });
+            }
+
+            markerClick(marker, i);
+
+            flkty.on('change', function(index){
+                map.panTo(citiesData[index].coordinates);
+                map.setZoom(7);
             });
         }
     }
